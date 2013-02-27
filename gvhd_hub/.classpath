@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre6">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v7.0">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.web"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="C:/_IRIC/Neo4J/neo4j-community-1.8/lib/geronimo-jta_1.1_spec-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/_IRIC/Neo4J/neo4j-community-1.8/lib/lucene-core-3.5.0.jar"/>
+	<classpathentry kind="lib" path="C:/_IRIC/Neo4J/neo4j-community-1.8/lib/neo4j-cypher-1.8.jar"/>
+	<classpathentry kind="lib" path="C:/_IRIC/Neo4J/neo4j-community-1.8/lib/neo4j-graph-algo-1.8.jar"/>
+	<classpathentry kind="lib" path="C:/_IRIC/Neo4J/neo4j-community-1.8/lib/neo4j-graph-matching-1.8.jar"/>
+	<classpathentry kind="lib" path="C:/_IRIC/Neo4J/neo4j-community-1.8/lib/neo4j-jmx-1.8.jar"/>
+	<classpathentry kind="lib" path="C:/_IRIC/Neo4J/neo4j-community-1.8/lib/neo4j-kernel-1.8.jar"/>
+	<classpathentry kind="lib" path="C:/_IRIC/Neo4J/neo4j-community-1.8/lib/neo4j-lucene-index-1.8.jar"/>
+	<classpathentry kind="lib" path="C:/_IRIC/Neo4J/neo4j-community-1.8/lib/neo4j-shell-1.8.jar"/>
+	<classpathentry kind="lib" path="C:/_IRIC/Neo4J/neo4j-community-1.8/lib/neo4j-udc-1.8.jar"/>
+	<classpathentry kind="lib" path="C:/_IRIC/Neo4J/neo4j-community-1.8/lib/org.apache.servicemix.bundles.jline-0.9.94_1.jar"/>
+	<classpathentry kind="lib" path="C:/_IRIC/Neo4J/neo4j-community-1.8/lib/scala-library-2.9.1-1.jar"/>
+	<classpathentry kind="lib" path="C:/_IRIC/Neo4J/neo4j-community-1.8/lib/server-api-1.8.jar"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>
