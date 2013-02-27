@@ -11,8 +11,8 @@
 <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
 
 <!-- Ext JS Library file -->
-<script type="text/javascript" src="ExtJS/bootstrap.js"></script>
-<link rel="stylesheet" type="text/css" href="ExtJS/resources/css/ext-all.css" />
+<script type="text/javascript" src="js/ExtJS/bootstrap.js"></script>
+<link rel="stylesheet" type="text/css" href="js/ExtJS/resources/css/ext-all.css" />
 
     <script type="text/javascript" src="js/d3/d3.v2.js" charset="utf-8"></script>
     <!-- script type="text/javascript" src="js/d3/d3.geom.js"></script-->

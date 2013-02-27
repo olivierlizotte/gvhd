@@ -4,7 +4,7 @@ try{
 	//XmlToDb.RUN("G:\\Thibault\\-=Proteomics_Raw_Data=-\\ELITE\\JUN27_2012\\MR 4Rep DS\\Proteoprofile HGR DB all Mascot score\\PigInfo.clusterML", "dev");
 
 	 
-	File file = new File("files/ControlHP_Transpose.csv");	 
+	File file = new File(application.getRealPath("admin/GVHD/files/ControlHP_Transpose.csv"));	 
 	BufferedReader bufRdr  = new BufferedReader(new FileReader(file));
 	String line = bufRdr.readLine();
 	//Handle title line with properties

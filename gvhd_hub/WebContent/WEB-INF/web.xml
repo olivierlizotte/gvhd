@@ -6,9 +6,9 @@
    <security-constraint>
       <web-resource-collection>
          <web-resource-name>
-            admin
+            admin2
          </web-resource-name>
-         <url-pattern>/admin/*</url-pattern>         
+         <url-pattern>/admin2/*</url-pattern>         
          <web-resource-name>
             applets
          </web-resource-name>

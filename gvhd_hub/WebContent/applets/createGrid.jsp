@@ -382,7 +382,7 @@
 			});//*/
 //----------------END OF GRID FOCUS FIX-----------------------------------------------------------------------------------
     
-    Ext.Loader.setPath('Ext.ux', 'ExtJS/examples/ux');
+    Ext.Loader.setPath('Ext.ux', 'js/ExtJS/examples/ux');
 	Ext.require(['Ext.tab.*',
 				 'Ext.ux.grid.FiltersFeature']);
 

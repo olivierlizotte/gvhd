@@ -1,7 +1,7 @@
 <html>
 	<head>
-	<link rel="stylesheet" type="text/css" href="ExtJS/resources/css/ext-all.css">
-	<script type="text/javascript" src="ExtJS/ext-all.js"></script>
+	<link rel="stylesheet" type="text/css" href="js/ExtJS/resources/css/ext-all.css">
+	<script type="text/javascript" src="js/ExtJS/ext-all.js"></script>
 	<script type="text/javascript">
 	
 	var login;
