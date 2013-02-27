@@ -64,7 +64,7 @@ EmbeddedGraphDatabase graphDb = DefaultTemplate.graphDb();
 								String e    	   = nodeProt.getProperty("Protein id").toString();
 								String f    	   = NodeHelper.decimalFormat(nodeProt.getProperty("Protein x1").toString());
 								
-								out.println(sequence + "," + id + "," + position + "," + 
+								out.println(sequence + "," + e + "," + position + "," + 
 			"Chromosome number: " + a + " | Gene symbol: " + b + "; Gene id: " + c + " | Transcript id: " + d + " | Protein id: " + e + "; Protein x1: " + f);
 							}
 						}						

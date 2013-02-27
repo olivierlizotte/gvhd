@@ -99,7 +99,7 @@ Node peptidome = graphDb.getNodeById(875149);
 	//FileWriter fw = new FileWriter("outputImmunoPep.csv");
 	out.println(titleLine);
 	//fw.write(titleLine + "\n");
-		
+		/*
 	for(Relationship relProtein : proteins.keySet())
 	{
 		//Chromosome number: 1 | Gene symbol: YBX1  Gene id: ENSG00000065978 | Transcript id: ENST00000318612 | Protein id: ENSP00000361621  Protein x1: 0
@@ -129,7 +129,7 @@ Node peptidome = graphDb.getNodeById(875149);
 				//fw.write(header + line + "\n");
 			}
 		}
-	}
+	}//*/
 	
 	//pw.flush();
     //pw.close();    

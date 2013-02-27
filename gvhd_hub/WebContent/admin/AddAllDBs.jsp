@@ -1,6 +1,6 @@
 
 <%@ page import="graphDB.explore.*" %>
-<%@ page import="graphDB.explore.users.*" %>
+<%@ page import="graphDB.users.*" %>
 
 <%
 try{

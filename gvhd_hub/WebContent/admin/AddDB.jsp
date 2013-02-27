@@ -1,4 +1,4 @@
-<%@ page import="graphDB.explore.users.*" %>
+<%@ page import="graphDB.users.*" %>
 <%@ page import="graphDB.explore.*" %>
 
 <%

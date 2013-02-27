@@ -96,7 +96,8 @@ abstract public class DefaultTemplate
 	//public static String GraphDBString = "C:\\_IRIC\\DATA\\M&R\\graphProject981_EBV_3.db";
 	//public static String GraphDBString = "C:\\_IRIC\\DATA\\M&R\\bkp\\graphProject981_EBV_3c.db";
 	
-	public static String GraphDBString = "C:\\_IRIC\\DATA\\GVHD\\GVHD37.db";	
+	public static String GraphDBString = "/home/olivier/Documents/DBs/GVHD1.db";
+	//public static String GraphDBString = "C:\\_IRIC\\DATA\\GVHD\\GVHD37.db";	
 //	public static String GraphDBString = "C:\\_IRIC\\DATA\\MnR\\graph_ExoTrans_Ebv_5ppmb.db";
 	
 //	public static String GraphDBString = "/apps/Neo4J/neo4j-community-1.8.M03/data/graph_ExoTrans_Ebv_5ppmb.db";

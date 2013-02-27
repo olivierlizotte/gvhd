@@ -22,7 +22,7 @@
 <%
 try{
 
-
+/*
 EmbeddedGraphDatabase graphDb = DefaultTemplate.graphDb();
 
 	Node[] proteinSequenceNodes = PeptideSequence.GetAllProteins();
@@ -48,7 +48,7 @@ EmbeddedGraphDatabase graphDb = DefaultTemplate.graphDb();
 	for (Integer l : protSizes){
 		dataFile.write(l.toString()+"\n");
 	}
-	dataFile.close();
+	dataFile.close();//*/
 }
 catch(Exception e)
 {
