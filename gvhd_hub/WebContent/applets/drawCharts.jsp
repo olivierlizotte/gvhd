@@ -158,7 +158,26 @@ try{
                 				{                        
 				                    nv.addGraph(function()
 				                    {
-				                    	chart<%=graphNumber%>.xAxis.tickFormat(d3.format(',f'));
+				                    	chart<%=graphNumber%>.xAxis.tickFormat( d3.format(',.2f'));
+				                    	/*function(d) 
+				                    		{
+				                    			if(d < 0) return 'A';
+				                    			if(d < 15) return 'B';
+				                    			if(d < 45) return 'C';
+				                    			if(d < 75) return 'D';
+				                    			if(d < 105) return 'E';
+				                    			if(d < 135) return 'F';
+				                    			if(d < 165) return 'G';
+				                    			if(d < 195) return 'H';
+				                    			if(d < 225) return 'I';
+				                    			if(d < 255) return 'J';
+				                    			if(d < 285) return 'K';
+				                    			if(d < 315) return 'L';
+				                    			if(d < 345) return 'M';
+				                    			if(d < 375) return 'N'; 
+				                    			return 'X';
+				                    			return d3.format(',.2f');
+				                    		});//*/
 				                    	chart<%=graphNumber%>.yAxis.tickFormat(d3.format(',.2f'));
 				                    	d3.select('#chart<%=graphNumber%> svg').datum(<%=jsonData%>).transition().duration(500).call(chart<%=graphNumber%>);
 				                    	nv.utils.windowResize(chart<%=graphNumber%>.update);

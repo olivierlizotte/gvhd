@@ -215,6 +215,7 @@ d3.time.monthEnds = d3_time_range(d3.time.monthEnd, function(date) {
 
     container.style.left = left+'px';
     container.style.top = top+'px';
+    container.style['z-index'] = 9000;
     container.style.opacity = 1;
     container.style.position = 'absolute'; //fix scroll bar issue
     container.style.pointerEvents = 'none'; //fix scroll bar issue
@@ -832,17 +833,17 @@ nv.models.bullet = function() {
 
 
 
-      var w0 = function(d) { return Math.abs(x0(d) - x0(0)) }, // TODO: could optimize by precalculating x0(0) and x1(0)
-          w1 = function(d) { return Math.abs(x1(d) - x1(0)) };
-      var xp0 = function(d) { return d < 0 ? x0(d) : x0(0) },
-          xp1 = function(d) { return d < 0 ? x1(d) : x1(0) };
+      var w0 = function(d) { return Math.abs(x0(d) - x0(0)); }, // TODO: could optimize by precalculating x0(0) and x1(0)
+          w1 = function(d) { return Math.abs(x1(d) - x1(0)); };
+      var xp0 = function(d) { return d < 0 ? x0(d) : x0(0); },
+          xp1 = function(d) { return d < 0 ? x1(d) : x1(0); };
 
 
       g.select('rect.nv-rangeMax')
           .attr('height', availableHeight)
           .attr('width', w1(rangeMax > 0 ? rangeMax : rangeMin))
           .attr('x', xp1(rangeMax > 0 ? rangeMax : rangeMin))
-          .datum(rangeMax > 0 ? rangeMax : rangeMin)
+          .datum(rangeMax > 0 ? rangeMax : rangeMin);
           /*
           .attr('x', rangeMin < 0 ?
                          rangeMax > 0 ?
@@ -855,7 +856,7 @@ nv.models.bullet = function() {
           .attr('height', availableHeight)
           .attr('width', w1(rangeAvg))
           .attr('x', xp1(rangeAvg))
-          .datum(rangeAvg)
+          .datum(rangeAvg);
           /*
           .attr('width', rangeMax <= 0 ?
                              x1(rangeMax) - x1(rangeAvg)
@@ -871,7 +872,7 @@ nv.models.bullet = function() {
           .attr('x', xp1(rangeMax))
           .attr('width', w1(rangeMax > 0 ? rangeMin : rangeMax))
           .attr('x', xp1(rangeMax > 0 ? rangeMin : rangeMax))
-          .datum(rangeMax > 0 ? rangeMin : rangeMax)
+          .datum(rangeMax > 0 ? rangeMin : rangeMax);
           /*
           .attr('width', rangeMax <= 0 ?
                              x1(rangeAvg) - x1(rangeMin)
@@ -894,32 +895,32 @@ nv.models.bullet = function() {
                 value: measurez[0],
                 label: 'Current',
                 pos: [x1(measurez[0]), availableHeight/2]
-              })
+              });
           })
           .on('mouseout', function() {
               dispatch.elementMouseout({
                 value: measurez[0],
                 label: 'Current'
-              })
-          })
+              });
+          });
 
       var h3 =  availableHeight / 6;
       if (markerz[0]) {
         g.selectAll('path.nv-markerTriangle')
-            .attr('transform', function(d) { return 'translate(' + x1(markerz[0]) + ',' + (availableHeight / 2) + ')' })
+            .attr('transform', function(d) { return 'translate(' + x1(markerz[0]) + ',' + (availableHeight / 2) + ')'; })
             .attr('d', 'M0,' + h3 + 'L' + h3 + ',' + (-h3) + ' ' + (-h3) + ',' + (-h3) + 'Z')
             .on('mouseover', function() {
               dispatch.elementMouseover({
                 value: markerz[0],
                 label: 'Previous',
                 pos: [x1(markerz[0]), availableHeight/2]
-              })
+              });
             })
             .on('mouseout', function() {
               dispatch.elementMouseout({
                 value: markerz[0],
                 label: 'Previous'
-              })
+              });
             });
       } else {
         g.selectAll('path.nv-markerTriangle').remove();
@@ -934,7 +935,7 @@ nv.models.bullet = function() {
               value: d,
               label: label,
               pos: [x1(d), availableHeight/2]
-            })
+            });
           })
           .on('mouseout', function(d,i) {
             var label = !i ? "Maximum" : i == 1 ? "Mean" : "Minimum";
@@ -942,8 +943,8 @@ nv.models.bullet = function() {
             dispatch.elementMouseout({
               value: d,
               label: label
-            })
-          })
+            });
+          });
 
 /* // THIS IS THE PREVIOUS BULLET IMPLEMENTATION, WILL REMOVE SHORTLY
       // Update the range rects.

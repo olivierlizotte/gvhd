@@ -9,3 +9,6 @@ Compute Control (CD) ... 			<%@include file="ComputeInfoControlCD.jsp"%><br/>
 Compute Patients info (First Pass)  <%@include file="ComputeInfoPatients.jsp"%><br/>
 Compute Patients info (Second Pass) <%@include file="ComputeInfoPatients2.jsp"%><br/>
 Draw Charts for each Patient ...    <%@include file="ComputePatientsGraph.jsp"%><br/>
+Draw overall graph for tendencies...<%@include file="ComputeOverallGraph.jsp"%><br/>
+Draw all patients on same graph ... <%@include file="ComputePatientsOverallGraph.jsp"%><br/>
+Draw overall tendency ...           <%@include file="ComputePatientsAverageGraph.jsp"%><br/>

@@ -35,6 +35,7 @@ try{
 				String arrayDESTotal = "";
 				String arrayHPTotal = "";
 				String arrayLPTotal = "";
+				String arrayGrouped = "";
 				List<Node> samples = new ArrayList<Node>();
 				final long timePoint0 = dateT0;
 				
@@ -92,17 +93,25 @@ try{
 					{					
 						strToAdd += ", 'Day 0': '" + sample.getProperty("Date") + "'";
 					}
-					
+
+					double tmp1 = NodeHelper.PropertyToDouble(sample.getProperty("Ratio DES Libre"));
+					double tmp2 = NodeHelper.PropertyToDouble(sample.getProperty("Ratio DES Total"));
+					double tmp3 = NodeHelper.PropertyToDouble(sample.getProperty("Ratio HP Libre"));
+					double tmp4 = NodeHelper.PropertyToDouble(sample.getProperty("Ratio HP Total"));
+					double tmp5 = NodeHelper.PropertyToDouble(sample.getProperty("Ratio LP Libre"));
+					double tmp6 = NodeHelper.PropertyToDouble(sample.getProperty("Ratio LP Total"));
+					double average = (tmp1 + tmp2 + tmp3 + tmp4 + tmp5 + tmp6) / 6.0;
+					arrayGrouped   += ",{x:" + Long.toString(daySince) + ", y: " + average + strToAdd + "}";
 					arrayDESLibre  += ",{x:" + Long.toString(daySince) + ", y: " + sample.getProperty("Ratio DES Libre") + strToAdd + "}";
 					arrayHPLibre   += ",{x:" + Long.toString(daySince) + ", y: " + sample.getProperty("Ratio HP Libre")  + strToAdd + "}";
 					arrayLPLibre   += ",{x:" + Long.toString(daySince) + ", y: " + sample.getProperty("Ratio LP Libre")  + strToAdd + "}";
 					arrayDESTotal  += ",{x:" + Long.toString(daySince) + ", y: " + sample.getProperty("Ratio DES Total") + strToAdd + "}";
 					arrayHPTotal   += ",{x:" + Long.toString(daySince) + ", y: " + sample.getProperty("Ratio HP Total")  + strToAdd + "}";
-					arrayLPTotal   += ",{x:" + Long.toString(daySince) + ", y: " + sample.getProperty("Ratio LP Total")  + strToAdd + "}";
-					
+					arrayLPTotal   += ",{x:" + Long.toString(daySince) + ", y: " + sample.getProperty("Ratio LP Total")  + strToAdd + "}";					
 				}
 				
 				json = "[{values:[" + arrayDESLibre.substring(1) + "], key: 'DES Libre'},";
+				json += "{values:[" + arrayGrouped.substring(1) + "], key: 'Grouped Average'},";
 				json += "{values:[" + arrayDESTotal.substring(1) + "], key: 'DES Total'}]";
 				
 				Node desChart = graphDb.createNode();
@@ -113,6 +122,7 @@ try{
 				
 				
 				json = "[{values:[" + arrayHPLibre.substring(1) + "], key: 'HP Libre'},";
+				json += "{values:[" + arrayGrouped.substring(1) + "], key: 'Grouped Average'},";
 				json += "{values:[" + arrayHPTotal.substring(1) + "], key: 'HP Total'}]";
 				
 				Node hpChart = graphDb.createNode();
@@ -123,6 +133,7 @@ try{
 				
 	
 				json = "[{values:[" + arrayLPLibre.substring(1) + "], key: 'LP Libre'},";
+				json += "{values:[" + arrayGrouped.substring(1) + "], key: 'Grouped Average'},";
 				json += "{values:[" + arrayLPTotal.substring(1) + "], key: 'LP Total'}]";
 				
 				Node lpChart = graphDb.createNode();
