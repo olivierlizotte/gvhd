@@ -214,7 +214,10 @@ d3.time.monthEnds = d3_time_range(d3.time.monthEnd, function(date) {
 
 
     container.style.left = left+'px';
-    container.style.top = top+'px';
+    if(top < 40)
+    	container.style.top = '0px';
+    else
+    	container.style.top = top+'px';
     container.style['z-index'] = 9000;
     container.style.opacity = 1;
     container.style.position = 'absolute'; //fix scroll bar issue
