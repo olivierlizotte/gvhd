@@ -63,7 +63,7 @@ try{
 					{				
 						String date = sample.getProperty("Date").toString();
 						double daySince = (formater.parse(date).getTime() - dateT0) /(1000.0*60*60*24);
-						if(daySince >= 0 && daySince <= dateY)
+						if(daySince >= 0 && daySince <= dateY && sample.hasProperty("Ratio DES Libre") && sample.hasProperty("Ratio DES Total"))
 						{
 							double tmp = NodeHelper.PropertyToDouble(sample.getProperty("Ratio DES Libre"));
 							double tmp2 = NodeHelper.PropertyToDouble(sample.getProperty("Ratio DES Total"));

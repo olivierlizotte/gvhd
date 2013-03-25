@@ -84,7 +84,10 @@ try{
 							{
 								//Merge back replicate information into Forme node
 								Node replicate = repRel.getOtherNode(forme);
-								if (NodeHelper.getType(replicate).equals("Replicate"))
+								if (NodeHelper.getType(replicate).equals("Replicate") &&
+										replicate.hasProperty("Ratio DES") &&
+										replicate.hasProperty("Ratio HP") &&
+										replicate.hasProperty("Ratio LP"))
 								{
 									//For every replicates of forms, compute (DEScorr / DES_CD) / (D4Des / D4Des_CD)
 									double cdDES = ratioDesCD / 100000.0; 

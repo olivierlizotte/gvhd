@@ -30,8 +30,10 @@ try{
 					if(sample.getProperty("Sample").toString().endsWith("B"))
 					{
 						dateT0 = formater.parse(sample.getProperty("Date").toString()).getTime();
-						desLibreDivider = NodeHelper.PropertyToDouble(sample.getProperty("Ratio DES Libre"));
-						desTotalDivider = NodeHelper.PropertyToDouble(sample.getProperty("Ratio DES Total"));
+						if(sample.hasProperty("Ratio DES Libre"))
+							desLibreDivider = NodeHelper.PropertyToDouble(sample.getProperty("Ratio DES Libre"));
+						if(sample.hasProperty("Ratio DES Total"))
+							desTotalDivider = NodeHelper.PropertyToDouble(sample.getProperty("Ratio DES Total"));
 					}
 					if(sample.getProperty("Sample").toString().endsWith("A"))
 					{
@@ -56,9 +58,12 @@ try{
 						double daySince = (formater.parse(date).getTime() - dateT0) /(1000.0*60*60*24);
 						if(daySince >= 0 && daySince <= dateY)
 						{
-							double tmp = NodeHelper.PropertyToDouble(sample.getProperty("Ratio DES Libre"));
-							double tmp2 = NodeHelper.PropertyToDouble(sample.getProperty("Ratio DES Total"));
-							des.add(new Pair(daySince / dateY, new Pair(tmp / desLibreDivider, tmp2 / desTotalDivider)));
+							if(sample.hasProperty("Ratio DES Libre") && sample.hasProperty("Ratio DES Total"))
+							{
+								double tmp = NodeHelper.PropertyToDouble(sample.getProperty("Ratio DES Libre"));
+								double tmp2 = NodeHelper.PropertyToDouble(sample.getProperty("Ratio DES Total"));
+								des.add(new Pair(daySince / dateY, new Pair(tmp / desLibreDivider, tmp2 / desTotalDivider)));
+							}
 						}								
 					}
 				}

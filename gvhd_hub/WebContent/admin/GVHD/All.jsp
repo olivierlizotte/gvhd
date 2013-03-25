@@ -11,4 +11,5 @@ Compute Patients info (Second Pass) <%@include file="ComputeInfoPatients2.jsp"%>
 Draw Charts for each Patient ...    <%@include file="ComputePatientsGraph.jsp"%><br/>
 Draw overall graph for tendencies...<%@include file="ComputeOverallGraph.jsp"%><br/>
 Draw all patients on same graph ... <%@include file="ComputePatientsOverallGraph.jsp"%><br/>
-Draw overall tendency ...           <%@include file="ComputePatientsAverageGraph.jsp"%><br/>
+Draw overall tendency ...           <%@include file="ComputePatientsAverageGraphLetters.jsp"%><br/>
+Draw overall tendency #2...         <%@include file="ComputePatientsAverageGraphAToY.jsp"%><br/>
