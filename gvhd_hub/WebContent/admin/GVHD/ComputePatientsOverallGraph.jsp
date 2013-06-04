@@ -36,7 +36,9 @@ try{
 						{
 							dateT0 = formater.parse(sample.getProperty("Date").toString()).getTime();
 						}
-						if(sample.getProperty("Sample").toString().endsWith("A"))
+						if(sample.getProperty("Sample").toString().endsWith("A") &&
+								sample.hasProperty("Ratio DES Libre") &&
+								sample.hasProperty("Ratio DES Total"))
 						{
 							desLibreDivider = NodeHelper.PropertyToDouble(sample.getProperty("Ratio DES Libre"));
 							desTotalDivider = NodeHelper.PropertyToDouble(sample.getProperty("Ratio DES Total"));

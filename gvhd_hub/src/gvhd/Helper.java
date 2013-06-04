@@ -94,7 +94,10 @@ public class Helper {
 		{
 			output += ",{x:" + dates.get(i) + ", y: " + values.get(i).toString() + comments.get(i) + "}";
 		}
-		return output.substring(1);
+		if(output.length() > 0)
+			return output.substring(1);
+		else
+			return output;
 		//arrayDESLibre  += ",{x:" + Long.toString(daySince) + ", y: " + sample.getProperty("Ratio DES Libre") + strToAdd + "}";	
 	}
 	public static Node CreatePatient(EmbeddedGraphDatabase graphDb, Node project, String name)

@@ -90,7 +90,8 @@ try{
 										replicate.hasProperty("Ratio LP"))
 								{
 									//For every replicates of forms, compute (DEScorr / DES_CD) / (D4Des / D4Des_CD)
-									double cdDES = ratioDesCD / 100000.0; 
+									double cdDES = ratioDesCD / 100000.0;
+										
 									double cdDESD4 = ratioD4DesCD / 100000.0;
 									
 									double cdHP = ratioHpCD / 3000000.0; 
@@ -98,9 +99,20 @@ try{
 									double cdHPD4 = ratioD4HpCD / 100000.0;
 
 									//Corrected (normalized) ratio
-									double desRatioTmp = NodeHelper.PropertyToDouble(replicate.getProperty("Ratio DES")) * (cdDESD4 / cdDES);
-									double hpRatioTmp = NodeHelper.PropertyToDouble(replicate.getProperty("Ratio HP")) * (cdHPD4 / cdHP);
-									double lpRatioTmp = NodeHelper.PropertyToDouble(replicate.getProperty("Ratio LP")) * (cdHPD4 / cdLP);
+									double tmpp = cdDESD4;
+									if(cdDES == 0)
+										tmpp = 1;
+									else
+										tmpp /= cdDES;
+									double desRatioTmp = NodeHelper.PropertyToDouble(replicate.getProperty("Ratio DES"));
+									double hpRatioTmp = NodeHelper.PropertyToDouble(replicate.getProperty("Ratio HP"));
+									double lpRatioTmp = NodeHelper.PropertyToDouble(replicate.getProperty("Ratio LP"));
+									if(cdDES != 0)
+										desRatioTmp *= (cdDESD4 / cdDES);
+									if(cdHP != 0)
+										hpRatioTmp *= (cdHPD4 / cdHP);
+									if(cdLP != 0)
+										lpRatioTmp *= (cdHPD4 / cdLP);
 									//Simple ratio 
 									/*
 									double desRatioTmp = NodeHelper.PropertyToDouble(replicate.getProperty("Ratio DES"));

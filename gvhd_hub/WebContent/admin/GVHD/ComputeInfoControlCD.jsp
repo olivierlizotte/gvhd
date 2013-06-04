@@ -81,7 +81,7 @@ try{
 							if(replicate.hasProperty("DES"))
 							{
 								double tmp = NodeHelper.PropertyToDouble(replicate.getProperty("DES"));
-								if(!Double.isNaN(tmp) && tmp > 0)
+								if(!Double.isNaN(tmp))// && tmp > 0)
 								{
 									des += tmp;
 									nbDes++;
@@ -138,6 +138,7 @@ try{
 							//Replicate
 						}
 					}
+					
 					if(nbD4Des > 0)
 						forme.setProperty("D4-DES", d4Des / nbD4Des);
 					if(nbDes > 0)
@@ -149,7 +150,7 @@ try{
 					if(nbLp > 0)
 						forme.setProperty("LP", lp / nbLp);
 					
-					if(nbD4Hp > 0)
+					if(nbDes > 0)
 						forme.setProperty("DES Corr", desCorr / nbDes);
 					if(nbHp > 0)
 						forme.setProperty("HP Corr", hpCorr / nbHp);
@@ -163,7 +164,7 @@ try{
 							controlCD.setProperty("D4-DES Libre", d4Des / nbD4Des);
 						if(nbD4Hp > 0)
 							controlCD.setProperty("D4-HP Libre", d4Hp / nbD4Hp);
-						if(nbD4Hp > 0)
+						if(nbDes > 0)
 							controlCD.setProperty("DES Corr Libre", desCorr / nbDes);
 						if(nbHp > 0)
 							controlCD.setProperty("HP Corr Libre", hpCorr / nbHp);
@@ -176,7 +177,7 @@ try{
 							controlCD.setProperty("D4-DES Total", d4Des / nbD4Des);
 						if(nbD4Hp > 0)
 							controlCD.setProperty("D4-HP Total", d4Hp / nbD4Hp);
-						if(nbD4Hp > 0)
+						if(nbDes > 0)
 							controlCD.setProperty("DES Corr Total", desCorr / nbDes);
 						if(nbHp > 0)
 							controlCD.setProperty("HP Corr Total", hpCorr / nbHp);

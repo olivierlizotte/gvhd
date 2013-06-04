@@ -429,7 +429,7 @@ public class NodeHelper
 		}
 		return 0;
 	}
-	
+		
 	public static double PropertyToDouble(Object value)
 	{
 		if(value instanceof String)
