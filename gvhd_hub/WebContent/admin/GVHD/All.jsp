@@ -13,3 +13,6 @@ Draw overall graph for tendencies...<%@include file="ComputeOverallGraph.jsp"%><
 Draw all patients on same graph ... <%@include file="ComputePatientsOverallGraph.jsp"%><br/>
 Draw overall tendency ...           <%@include file="ComputePatientsAverageGraphLetters.jsp"%><br/>
 Draw overall tendency #2...         <%@include file="ComputePatientsAverageGraphAToY.jsp"%><br/>
+Draw all patients on same graph ... <%@include file="ComputePatientsOverallGraphDES.jsp"%><br/>
+Draw all patients on same graph ... <%@include file="ComputePatientsOverallGraphHP.jsp"%><br/>
+Draw all patients on same graph ... <%@include file="ComputePatientsOverallGraphLP.jsp"%><br/>

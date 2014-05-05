@@ -2,7 +2,7 @@
     <wb-module deploy-name="gvhd_hub">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <property name="context-root" value="gvhd"/>
         <property name="java-output-path" value="/gvhd_hub/build/classes"/>
+        <property name="context-root" value="gvhd_hub"/>
     </wb-module>
 </project-modules>
